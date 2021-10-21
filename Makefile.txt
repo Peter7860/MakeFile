@@ -1,0 +1,16 @@
+CC = g++
+
+all: Exe 
+
+Exe : Stat.o File.o
+
+    $(CC) -o Exe Stat.o File.o
+
+Stat.o: Stat.cpp
+    $(CC) -c Stat.cpp
+
+File.o: File.cpp
+    $(CC) -c File.cpp
+
+clean:
+    rm -rf *o Stat.o Stat.o
